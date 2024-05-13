@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import '../store/login.css'
 import { useNavigate }  from "react-router-dom";
 import axios from "axios";
-import Layout from "../Component/Layout";
+
 
 function Login() {
   const dispatch = useDispatch();
@@ -53,7 +53,7 @@ function Login() {
       localStorage.setItem("isLoggedIn", true.toString());
       
       setIsLoggedIn(true);
-      navigate("/Product")
+      navigate("/Dashboard")
     } catch (error) {
       console.log(error);
     }
@@ -63,7 +63,7 @@ function Login() {
 
   return (
     <div>
-      <Layout />
+      
       <br />
       <br />
      <div className="login-page">
